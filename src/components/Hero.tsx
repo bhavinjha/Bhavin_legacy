@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import profileImage from "@/assets/profile.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -57,11 +58,11 @@ const Hero = () => {
           <div className="relative w-full max-w-md mx-auto">
             <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl opacity-30 animate-pulse"></div>
             <div className="relative aspect-square rounded-full overflow-hidden border-4 border-primary/30 shadow-glow-cyan">
-              <div className="w-full h-full bg-muted flex items-center justify-center">
-                <p className="text-muted-foreground text-center px-8">
-                  Your profile photo will appear here
-                </p>
-              </div>
+              <img 
+                src={profileImage} 
+                alt="Bhavin Jha - Young Programmer and Robotics Enthusiast" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
