@@ -21,7 +21,8 @@ const About = () => {
             <p className="text-lg leading-relaxed text-foreground/90">
               I am a student from Bihar who has started learning programming in Python and C++. 
               I also have experience in making detailed PowerPoint presentations and have created 
-              several interesting projects in robotics.
+              several interesting projects in robotics. I have advanced to AI automation and website 
+              construction, building smart workflows and modern web experiences.
             </p>
             <p className="text-lg leading-relaxed text-foreground/90">
               My journey in technology began with curiosity about how things work, which led me 
@@ -38,7 +39,7 @@ const About = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Education</h3>
                     <p className="text-sm text-muted-foreground">
-                      Class 7 Student at Scottish Public School
+                      Class 8th Student at Scottish Public School
                     </p>
                   </div>
                 </div>
@@ -66,7 +67,7 @@ const About = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Future Goals</h3>
                     <p className="text-sm text-muted-foreground">
-                      Learning advanced robotics and exploring AI technologies
+                      Mastering AI automation, advanced robotics, and building production-ready websites
                     </p>
                   </div>
                 </div>
@@ -86,11 +87,11 @@ const About = () => {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Age Group</span>
-                      <span className="font-semibold">Class 7 Student</span>
+                      <span className="font-semibold">Class 8th Student</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Main Interests</span>
-                      <span className="font-semibold">Programming & Robotics</span>
+                      <span className="font-semibold">Programming, Robotics & AI</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Languages</span>
@@ -98,7 +99,7 @@ const About = () => {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Projects Built</span>
-                      <span className="font-semibold text-primary">4+ Robots</span>
+                      <span className="font-semibold text-primary">4+ Robots & Websites</span>
                     </div>
                   </div>
                 </div>

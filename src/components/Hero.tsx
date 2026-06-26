@@ -31,7 +31,7 @@ const Hero = () => {
             Young Programmer & Robotics Enthusiast
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl">
-            A passionate Class 7 student from Bihar, India, exploring the exciting worlds 
+            A passionate Class 8th student from Bihar, India, exploring the exciting worlds 
             of programming, robotics, and technology. Building the future, one project at a time.
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
