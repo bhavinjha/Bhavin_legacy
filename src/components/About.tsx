@@ -39,7 +39,7 @@ const About = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Education</h3>
                     <p className="text-sm text-muted-foreground">
-                      Class 7 Student at Scottish Public School
+                      Class 8th Student at Scottish Public School
                     </p>
                   </div>
                 </div>
@@ -67,7 +67,7 @@ const About = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Future Goals</h3>
                     <p className="text-sm text-muted-foreground">
-                      Learning advanced robotics and exploring AI technologies
+                      Mastering AI automation, advanced robotics, and building production-ready websites
                     </p>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ const About = () => {
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Age Group</span>
-                      <span className="font-semibold">Class 7 Student</span>
+                      <span className="font-semibold">Class 8th Student</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Main Interests</span>
