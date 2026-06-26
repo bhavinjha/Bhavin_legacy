@@ -21,7 +21,8 @@ const About = () => {
             <p className="text-lg leading-relaxed text-foreground/90">
               I am a student from Bihar who has started learning programming in Python and C++. 
               I also have experience in making detailed PowerPoint presentations and have created 
-              several interesting projects in robotics.
+              several interesting projects in robotics. I have advanced to AI automation and website 
+              construction, building smart workflows and modern web experiences.
             </p>
             <p className="text-lg leading-relaxed text-foreground/90">
               My journey in technology began with curiosity about how things work, which led me 
