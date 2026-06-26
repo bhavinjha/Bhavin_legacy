@@ -1,4 +1,4 @@
-import { Code2, Cpu, Presentation, FileCode } from "lucide-react";
+import { Code2, Cpu, Presentation, FileCode, Bot, Globe } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const skills = [
@@ -22,6 +22,22 @@ const skills = [
     icon: Cpu,
     title: "Robotics",
     description: "Designing and building functional robots with sensors",
+    color: "text-primary",
+    bgColor: "bg-primary/10",
+    borderColor: "border-primary/20 hover:border-primary/50",
+  },
+  {
+    icon: Bot,
+    title: "AI Automation",
+    description: "Building smart automated workflows using AI tools",
+    color: "text-secondary",
+    bgColor: "bg-secondary/10",
+    borderColor: "border-secondary/20 hover:border-secondary/50",
+  },
+  {
+    icon: Globe,
+    title: "Website Construction",
+    description: "Creating modern, responsive websites and web applications",
     color: "text-primary",
     bgColor: "bg-primary/10",
     borderColor: "border-primary/20 hover:border-primary/50",
@@ -51,7 +67,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {skills.map((skill, index) => (
             <Card
               key={index}
