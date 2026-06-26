@@ -91,7 +91,7 @@ const About = () => {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Main Interests</span>
-                      <span className="font-semibold">Programming & Robotics</span>
+                      <span className="font-semibold">Programming, Robotics & AI</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Languages</span>
@@ -99,7 +99,7 @@ const About = () => {
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-muted-foreground">Projects Built</span>
-                      <span className="font-semibold text-primary">4+ Robots</span>
+                      <span className="font-semibold text-primary">4+ Robots & Websites</span>
                     </div>
                   </div>
                 </div>
