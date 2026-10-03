@@ -1,5 +1,7 @@
 import { Code2, Cpu, Presentation, FileCode, Bot, Globe } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import SectionHeader from "./SectionHeader";
+import TiltCard from "./TiltCard";
 
 const skills = [
   {
@@ -55,34 +57,63 @@ const skills = [
 const Skills = () => {
   return (
     <section id="skills" className="py-20 px-4 bg-muted/30 relative overflow-hidden">
-      <div className="absolute top-40 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-      
+      {/* Decorative elements */}
+      <div className="absolute top-40 left-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-40 right-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
+
+      {/* Top divider line */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+
       <div className="container relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="text-primary">Skills</span>
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Technologies and areas I'm passionate about
-          </p>
-        </div>
+        <SectionHeader
+          title="My Skills"
+          highlightWord="Skills"
+          subtitle="Technologies and areas I'm passionate about"
+        />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {skills.map((skill, index) => (
-            <Card
-              key={index}
-              className={`p-6 bg-card/50 backdrop-blur border ${skill.borderColor} transition-all duration-300 hover:scale-105 hover:shadow-glow-cyan group animate-fade-in`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className={`${skill.bgColor} w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                <skill.icon className={`h-7 w-7 ${skill.color}`} />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{skill.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {skill.description}
-              </p>
-            </Card>
+            <TiltCard key={index} intensity={5}>
+              <Card
+                className={`p-6 bg-card/50 backdrop-blur border ${skill.borderColor} transition-all duration-300 hover:scale-105 hover:shadow-glow-cyan group animate-fade-in cursor-pointer relative overflow-hidden`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Gradient overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                {/* Content */}
+                <div className="relative z-10 space-y-3">
+                  <div
+                    className={`${skill.bgColor} w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-125 transition-transform duration-300`}
+                  >
+                    <skill.icon className={`h-7 w-7 ${skill.color}`} />
+                  </div>
+
+                  <h3 className="text-xl font-semibold">{skill.title}</h3>
+
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {skill.description}
+                  </p>
+
+                  {/* Hover indicator */}
+                  <div className="pt-2 flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-xs font-medium">Learn more</span>
+                    <span className="inline-block">→</span>
+                  </div>
+                </div>
+
+                {/* Shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-x-full group-hover:translate-x-[-100%] transform" />
+              </Card>
+            </TiltCard>
           ))}
+        </div>
+
+        {/* Bottom message */}
+        <div className="mt-16 text-center animate-fade-in" style={{ animationDelay: "0.7s" }}>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            I'm constantly learning and exploring new technologies. Every skill is a stepping stone to innovation.
+          </p>
         </div>
       </div>
     </section>

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
 All colors MUST be HSL.
 */
 
@@ -44,6 +44,20 @@ All colors MUST be HSL.
     --glow-cyan: 0 0 40px hsl(189 100% 50% / 0.3);
     --glow-purple: 0 0 40px hsl(263 70% 60% / 0.3);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Technology-themed background patterns */
+    --grid-pattern: linear-gradient(to right, hsl(189 100% 50% / 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, hsl(189 100% 50% / 0.03) 1px, transparent 1px);
+
+    /* Animated particles */
+    --particle-color: hsl(189 100% 50% / 0.4);
+
+    /* Premium glow effects */
+    --glow-primary: 0 0 60px hsl(189 100% 50% / 0.4);
+    --glow-secondary: 0 0 60px hsl(263 70% 60% / 0.4);
+
+    /* Smooth transitions */
+    --transition-premium: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -54,5 +68,120 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Custom text selection highlight — vibrant purple */
+  ::selection {
+    background: hsl(263 70% 60% / 0.5);
+    color: #fff;
+  }
+
+  ::-moz-selection {
+    background: hsl(263 70% 60% / 0.5);
+    color: #fff;
+  }
+
+  /* Scrollbar styling for a consistent look */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(222 47% 5%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(222 30% 15%);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(189 100% 50% / 0.5);
+  }
+}
+
+/* Font utility classes */
+@layer utilities {
+  .font-display {
+    font-family: "Space Grotesk", Poppins, sans-serif;
+  }
+
+  .font-serif-display {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  .font-mono-code {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+  }
+
+  .font-orbitron {
+    font-family: "Orbitron", sans-serif;
+  }
+
+  .font-cinzel {
+    font-family: "Cinzel", serif;
+  }
+
+  .font-caveat {
+    font-family: "Caveat", cursive;
+  }
+
+  .font-syne {
+    font-family: "Syne", sans-serif;
+  }
+
+  /* Smooth pulse & fade animations */
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-fade-in-out {
+    animation: fadeInOut 3s ease-in-out infinite;
+  }
+
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+}
+
+@layer utilities {
+  /* Spin animations for 3D objects */
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  .animate-spin-slow-reverse {
+    animation: spin 8s linear infinite reverse;
+  }
+
+  .animate-spin-reverse {
+    animation: spin 3s linear infinite reverse;
+  }
+
+  /* Cursor blink for terminal */
+  .cursor-blink {
+    animation: cursor-blink 1s step-end infinite;
+  }
+
+  @keyframes cursor-blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
+    }
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
