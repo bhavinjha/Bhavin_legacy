@@ -1,5 +1,6 @@
 import { Heart, ArrowUp, Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImg from "@/assets/logo.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,9 +37,15 @@ const Footer = () => {
             <div className="space-y-4">
               <button
                 onClick={() => scrollToTop()}
-                className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:scale-110 transition-transform inline-block"
+                className="flex items-center gap-3 group text-left"
+                aria-label="Scroll to top"
               >
-                BJ
+                <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/50 shadow-md group-hover:scale-110 group-hover:border-primary transition-all duration-300">
+                  <img src={logoImg} alt="Khilkhila Logo" className="w-full h-full object-cover" />
+                </div>
+                <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent group-hover:scale-105 transition-transform inline-block">
+                  Bhavin Jha
+                </span>
               </button>
               <p className="text-sm text-muted-foreground max-w-xs">
                 Young programmer, robotics enthusiast, and technology student exploring the future of innovation.

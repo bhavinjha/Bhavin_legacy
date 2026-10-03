@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
+import logoImg from "@/assets/logo.jpg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -85,16 +86,24 @@ const Navigation = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo with magnetic effect */}
+            {/* Logo with photo & glow */}
             <button
               onClick={() => {
                 navigate("/");
                 setTimeout(() => scrollToSection("home"), 100);
               }}
-              className="relative text-2xl md:text-3xl font-bold group"
+              className="relative flex items-center gap-3 group"
+              aria-label="Home"
             >
-              <span className="bg-gradient-primary bg-clip-text text-transparent group-hover:scale-110 transition-transform inline-block">
-                BJ
+              <div className="relative w-9 h-9 md:w-10 md:h-10 rounded-full overflow-hidden border-2 border-primary/60 shadow-lg group-hover:border-primary group-hover:scale-110 transition-all duration-300">
+                <img
+                  src={logoImg}
+                  alt="Khilkhila Logo"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <span className="bg-gradient-primary bg-clip-text text-transparent font-bold text-xl md:text-2xl group-hover:scale-105 transition-transform tracking-tight">
+                Bhavin Jha
               </span>
               <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-20 blur-xl transition-opacity rounded-full" />
             </button>
