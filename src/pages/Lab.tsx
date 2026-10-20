@@ -3,6 +3,7 @@ import AICore from "@/components/AICore";
 import Robot3D from "@/components/Robot3D";
 import NeuralNetwork from "@/components/NeuralNetwork";
 import HolographicTerminal from "@/components/HolographicTerminal";
+import GlassFolder from "@/components/ui/glass-folder-cards";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -68,6 +69,57 @@ const Lab = () => {
         {/* Holographic Terminal - Cleanly integrated below */}
         <div className="w-full flex justify-center z-40 mt-4">
           <HolographicTerminal />
+        </div>
+
+        {/* Glass Folder Cards — 21st.dev interactive showcase */}
+        <div className="w-full flex flex-col items-center z-40 mt-16 mb-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent font-orbitron tracking-widest">
+              GLASS FOLDERS
+            </h2>
+            <p className="text-xs text-muted-foreground font-syne mt-2">
+              Hover to lean · Click to open · + to add
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-end">
+            <GlassFolder
+              label="My Projects"
+              art="aurora"
+              seed={3}
+              appearDelay={0}
+              files={[
+                { name: "Robotics Arm", meta: "3D · WebGL", art: "ember" },
+                { name: "Neural Net", meta: "Canvas · Live", art: "dusk" },
+                { name: "Portfolio", meta: "React · Vite" },
+              ]}
+            />
+            <GlassFolder
+              label="Lab Archives"
+              art="none"
+              action="more"
+              labelPlacement="top-left"
+              appearDelay={140}
+              files={[
+                { name: "AI Core", meta: "Neural · Live", art: "dusk" },
+                { name: "Experiments", meta: "12 files" },
+                { name: "Hologram", meta: "Terminal UI", art: "ember" },
+              ]}
+              menu={[{ label: "Rename" }, { label: "Share…", danger: true }]}
+            />
+            <GlassFolder
+              label="Khilkhila"
+              art="ember"
+              seed={11}
+              action="none"
+              labelPlacement="top-right"
+              appearDelay={280}
+              files={[
+                { name: "Gulab Jamun", meta: "Legacy · Est. 1985", art: "verdant" },
+                { name: "Recipe Notes", meta: "TXT · 2 KB" },
+                { name: "Brand Assets", meta: "PNG · 4.2 MB", art: "aurora" },
+              ]}
+            />
+          </div>
         </div>
       </div>
 
